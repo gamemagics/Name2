@@ -1,0 +1,412 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://addons/Name2/Scenes/BackgroundLabel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/Name2/Scenes/SelectableLabel.tscn" type="PackedScene" id=3]
+
+[node name="NameNode" type="VBoxContainer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -433.0
+margin_top = -300.0
+margin_right = 433.0
+margin_bottom = 300.0
+custom_constants/separation = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DisplayContainer" type="HBoxContainer" parent="."]
+margin_right = 866.0
+margin_bottom = 64.0
+custom_constants/separation = 40
+
+[node name="Avatar" type="TextureRect" parent="DisplayContainer"]
+margin_right = 64.0
+margin_bottom = 64.0
+texture = ExtResource( 1 )
+
+[node name="Input" parent="DisplayContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 104.0
+margin_right = 344.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 240, 0 )
+
+[node name="Hint" parent="DisplayContainer" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 384.0
+margin_right = 866.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 482, 0 )
+
+[node name="KeyboardContainer" type="PanelContainer" parent="."]
+margin_top = 104.0
+margin_right = 866.0
+margin_bottom = 469.0
+rect_min_size = Vector2( 0, 360 )
+
+[node name="SeperatorContainer" type="VBoxContainer" parent="KeyboardContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 859.0
+margin_bottom = 358.0
+custom_constants/separation = 95
+
+[node name="InputContainer" type="GridContainer" parent="KeyboardContainer/SeperatorContainer"]
+margin_right = 852.0
+margin_bottom = 192.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
+columns = 12
+
+[node name="A" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 68.0
+margin_bottom = 64.0
+Selected = true
+Text = "a"
+
+[node name="B" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 68.0
+margin_right = 136.0
+margin_bottom = 64.0
+Text = "b"
+
+[node name="C" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 136.0
+margin_right = 204.0
+margin_bottom = 64.0
+Text = "c"
+
+[node name="D" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 204.0
+margin_right = 272.0
+margin_bottom = 64.0
+Text = "d"
+
+[node name="E" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 272.0
+margin_right = 340.0
+margin_bottom = 64.0
+Text = "e"
+
+[node name="F" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 340.0
+margin_right = 408.0
+margin_bottom = 64.0
+Text = "f"
+
+[node name="G" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 408.0
+margin_right = 476.0
+margin_bottom = 64.0
+Text = "g"
+
+[node name="H" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 476.0
+margin_right = 544.0
+margin_bottom = 64.0
+Text = "h"
+
+[node name="I" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 544.0
+margin_right = 612.0
+margin_bottom = 64.0
+Text = "i"
+
+[node name="J" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 612.0
+margin_right = 680.0
+margin_bottom = 64.0
+Text = "j"
+
+[node name="K" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 680.0
+margin_right = 748.0
+margin_bottom = 64.0
+Text = "k"
+
+[node name="L" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 748.0
+margin_right = 816.0
+margin_bottom = 64.0
+Text = "l"
+
+[node name="M" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 64.0
+margin_right = 68.0
+margin_bottom = 128.0
+Text = "m"
+
+[node name="N" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 68.0
+margin_top = 64.0
+margin_right = 136.0
+margin_bottom = 128.0
+Text = "n"
+
+[node name="O" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 136.0
+margin_top = 64.0
+margin_right = 204.0
+margin_bottom = 128.0
+Text = "o"
+
+[node name="P" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 204.0
+margin_top = 64.0
+margin_right = 272.0
+margin_bottom = 128.0
+Text = "p"
+
+[node name="Q" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 272.0
+margin_top = 64.0
+margin_right = 340.0
+margin_bottom = 128.0
+Text = "q"
+
+[node name="R" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 340.0
+margin_top = 64.0
+margin_right = 408.0
+margin_bottom = 128.0
+Text = "r"
+
+[node name="S" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 408.0
+margin_top = 64.0
+margin_right = 476.0
+margin_bottom = 128.0
+Text = "s"
+
+[node name="T" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 476.0
+margin_top = 64.0
+margin_right = 544.0
+margin_bottom = 128.0
+Text = "t"
+
+[node name="U" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 544.0
+margin_top = 64.0
+margin_right = 612.0
+margin_bottom = 128.0
+Text = "u"
+
+[node name="V" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 612.0
+margin_top = 64.0
+margin_right = 680.0
+margin_bottom = 128.0
+Text = "v"
+
+[node name="W" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 680.0
+margin_top = 64.0
+margin_right = 748.0
+margin_bottom = 128.0
+Text = "w"
+
+[node name="X" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 748.0
+margin_top = 64.0
+margin_right = 816.0
+margin_bottom = 128.0
+Text = "x"
+
+[node name="Y" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 128.0
+margin_right = 68.0
+margin_bottom = 192.0
+Text = "y"
+
+[node name="Z" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 68.0
+margin_top = 128.0
+margin_right = 136.0
+margin_bottom = 192.0
+Text = "z"
+
+[node name="0" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 136.0
+margin_top = 128.0
+margin_right = 204.0
+margin_bottom = 192.0
+Text = "0"
+
+[node name="1" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 204.0
+margin_top = 128.0
+margin_right = 272.0
+margin_bottom = 192.0
+Text = "1"
+
+[node name="2" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 272.0
+margin_top = 128.0
+margin_right = 340.0
+margin_bottom = 192.0
+Text = "2"
+
+[node name="3" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 340.0
+margin_top = 128.0
+margin_right = 408.0
+margin_bottom = 192.0
+Text = "3"
+
+[node name="4" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 408.0
+margin_top = 128.0
+margin_right = 476.0
+margin_bottom = 192.0
+Text = "4"
+
+[node name="5" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 476.0
+margin_top = 128.0
+margin_right = 544.0
+margin_bottom = 192.0
+Text = "5"
+
+[node name="6" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 544.0
+margin_top = 128.0
+margin_right = 612.0
+margin_bottom = 192.0
+Text = "6"
+
+[node name="7" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 612.0
+margin_top = 128.0
+margin_right = 680.0
+margin_bottom = 192.0
+Text = "7"
+
+[node name="8" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 680.0
+margin_top = 128.0
+margin_right = 748.0
+margin_bottom = 192.0
+Text = "8"
+
+[node name="9" parent="KeyboardContainer/SeperatorContainer/InputContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 748.0
+margin_top = 128.0
+margin_right = 816.0
+margin_bottom = 192.0
+Text = "9"
+
+[node name="ControlContainer" type="HBoxContainer" parent="KeyboardContainer/SeperatorContainer"]
+margin_top = 287.0
+margin_right = 852.0
+margin_bottom = 351.0
+custom_constants/separation = 64
+
+[node name="Capital" parent="KeyboardContainer/SeperatorContainer/ControlContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 68.0
+margin_bottom = 64.0
+Text = "Capital"
+
+[node name="Backspace" parent="KeyboardContainer/SeperatorContainer/ControlContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 132.0
+margin_right = 200.0
+margin_bottom = 64.0
+Text = "Backspace"
+
+[node name="DontCare" parent="KeyboardContainer/SeperatorContainer/ControlContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 264.0
+margin_right = 332.0
+margin_bottom = 64.0
+Text = "Don't Care"
+
+[node name="OK" parent="KeyboardContainer/SeperatorContainer/ControlContainer" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 396.0
+margin_right = 464.0
+margin_bottom = 64.0
+Text = "OK"
