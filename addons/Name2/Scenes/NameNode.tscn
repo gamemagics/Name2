@@ -35,6 +35,7 @@ margin_left = 104.0
 margin_right = 344.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 240, 0 )
+MaxLength = 8
 
 [node name="Hint" parent="DisplayContainer" instance=ExtResource( 2 )]
 anchor_right = 0.0

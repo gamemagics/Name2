@@ -1,14 +1,20 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/Name2/Scripts/BackgroundLabel.cs" type="Script" id=1]
+[ext_resource path="res://addons/Name2/Fonts/BackgroundLabelFont.tres" type="DynamicFont" id=2]
 
 [node name="BackgroundLabel" type="PanelContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 7.0
-margin_top = 293.0
+margin_left = 20.0
+margin_top = 282.0
 margin_right = 1017.0
-margin_bottom = 307.0
+margin_bottom = 317.0
+custom_fonts/font = ExtResource( 2 )
+valign = 1
