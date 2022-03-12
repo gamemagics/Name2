@@ -17,3 +17,4 @@ margin_top = -232.0
 margin_bottom = 232.0
 Avatar = ExtResource( 3 )
 Hint = "Name this engine:"
+DefaultText = "Godot"

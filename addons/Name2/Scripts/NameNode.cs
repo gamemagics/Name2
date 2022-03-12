@@ -7,6 +7,7 @@ public class NameNode : VBoxContainer {
     private int maxLength = 8;
     private string text = "";
     private string hint = "";
+    private string defaultText = "";
     private TextureRect avatarRect = null;
     private BackgroundLabel inputLabel = null;
     private BackgroundLabel hintLabel = null;
@@ -59,6 +60,12 @@ public class NameNode : VBoxContainer {
                 hintLabel.Text = hint;
             }
         }
+    }
+
+    [Export]
+    public string DefaultText {
+        get { return defaultText; }
+        set { defaultText = value; }
     }
 
     [Signal]
