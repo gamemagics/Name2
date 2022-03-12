@@ -32,9 +32,6 @@ public class BackgroundLabel : PanelContainer {
         }
     }
 
-    [Signal]
-    delegate void OnTextChanged();
-
     public override void _Ready() {
         label = GetNode<Label>("Label");
         if (maxLength != -1) {
