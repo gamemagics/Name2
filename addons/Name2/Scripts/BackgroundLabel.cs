@@ -16,15 +16,9 @@ public class BackgroundLabel : PanelContainer {
         get { return maxLength; }
         set {
             maxLength = value;
-            text = "";
             pointer = 0;
-            for (int i = 0; i < maxLength; ++i) {
-                showText += placeholder;
-            }
-
-            if (label != null) {
-                label.Text = showText;
-            }
+            text = "";
+            ShowTextWithPlaceholder();
         }
     }
 
@@ -49,6 +43,35 @@ public class BackgroundLabel : PanelContainer {
         }
         else {
             label.Text = text;
+        }
+    }
+
+    public void Push(char c) {
+        if (pointer == maxLength) {
+            return;
+        }
+
+        ++pointer;
+        text += c;
+        ShowTextWithPlaceholder();
+    }
+
+    public void Pop() {
+        if (pointer > 0) {
+            --pointer;
+            text = text.Substring(0, text.Length - 1);
+            ShowTextWithPlaceholder();
+        }
+    }
+
+    private void ShowTextWithPlaceholder() {
+        showText = text;
+        for (int i = 0; i < maxLength; ++i) {
+            showText += placeholder;
+        }
+
+        if (label != null) {
+            label.Text = showText;
         }
     }
 }
