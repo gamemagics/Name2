@@ -61,7 +61,13 @@ public class SelectableLabel : HBoxContainer {
 
     public override void _Process(float delta) {
         if (selected && Input.IsActionJustPressed(selectKey)) {
-            this.EmitSignal("OnSelected", label.Text);
+            if (uppercase) {
+                this.EmitSignal("OnSelected", label.Text.ToUpper());
+            }
+            else {
+                this.EmitSignal("OnSelected", label.Text);    
+            }
+            
         }
     }
 }

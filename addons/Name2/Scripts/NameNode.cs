@@ -143,7 +143,28 @@ public class NameNode : VBoxContainer {
     }
 
     public void OnSelected(string val) {
-        GD.Print(val);
+        if (val == "Capital") {
+            foreach (SelectableLabel label in keys) {
+                label.Uppercase = !label.Uppercase;
+            }
+        }
+        else if (val == "Backspace") {
+            inputLabel.Pop();
+        }
+        else if (val == "Don't Care") {
+            inputLabel.Clear();
+            for (int i = 0; i < defaultText.Length; ++i) {
+                inputLabel.Push(defaultText[i]);
+            }
+        }
+        else if (val == "OK") {
+            if (!inputLabel.Text.Empty()) {
+                this.EmitSignal("OnSubmitted", inputLabel.Text);
+            }
+        }
+        else {
+            inputLabel.Push(val[0]);
+        }
     }
 
     private void SwitchSelectableLabel(int index, bool selected) {

@@ -16,8 +16,7 @@ public class BackgroundLabel : PanelContainer {
         get { return maxLength; }
         set {
             maxLength = value;
-            pointer = 0;
-            text = "";
+            Clear();
             ShowTextWithPlaceholder();
         }
     }
@@ -66,12 +65,17 @@ public class BackgroundLabel : PanelContainer {
 
     private void ShowTextWithPlaceholder() {
         showText = text;
-        for (int i = 0; i < maxLength; ++i) {
+        for (int i = text.Length; i < maxLength; ++i) {
             showText += placeholder;
         }
 
         if (label != null) {
             label.Text = showText;
         }
+    }
+
+    public void Clear() {
+        pointer = 0;
+        text = "";
     }
 }
