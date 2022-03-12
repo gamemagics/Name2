@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Demo.cs" type="Script" id=1]
 [ext_resource path="res://addons/Name2/Scenes/NameNode.tscn" type="PackedScene" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
 
 [node name="Demo" type="Control"]
 anchor_right = 1.0
@@ -14,3 +15,5 @@ __meta__ = {
 [node name="NameNode" parent="." instance=ExtResource( 2 )]
 margin_top = -232.0
 margin_bottom = 232.0
+Avatar = ExtResource( 3 )
+Hint = "Name this engine:"
