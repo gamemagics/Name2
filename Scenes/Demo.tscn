@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Demo.cs" type="Script" id=1]
 [ext_resource path="res://addons/Name2/Scenes/NameNode.tscn" type="PackedScene" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/ResultDialog.cs" type="Script" id=4]
 
 [node name="Demo" type="Control"]
 anchor_right = 1.0
@@ -18,3 +19,37 @@ margin_bottom = 232.0
 Avatar = ExtResource( 3 )
 Hint = "Name this engine:"
 DefaultText = "Godot"
+
+[node name="PopupDialog" type="PopupDialog" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -50.0
+margin_right = 100.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 200, 100 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PopupDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -7.0
+margin_right = 80.0
+margin_bottom = 7.0
+rect_min_size = Vector2( 180, 0 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="OnSubmitted" from="NameNode" to="PopupDialog" method="OnSubmitted"]
